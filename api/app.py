@@ -121,6 +121,8 @@ def register_extensions(app):
     cors.init_app(app)
     login_manager.init_app(app)
     migrate.init_app(app, db)
+
+    app.config.update(app.config.get("CELERY"))
     celery.conf.update(app.config)
 
 
