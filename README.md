@@ -58,7 +58,7 @@ flask run
 To run the celery tasks, use the following command.
 
 ```
-celery celery_worker.celery worker --concurrency=2 -E -Q {queue name} --logfile={queue name}.log --pidfile={queue name}.pid -D
+celery -A celery_worker.celery worker --concurrency=2 -E -Q {queue name} --logfile={queue name}.log --pidfile={queue name}.pid -D
 ```
 
 #### Command Line Tools
